@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # AngularCasestudy
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
@@ -30,4 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # angular-casestudy
 Angular web Application
->>>>>>> fbe4f63d873ae3112caf6db7b17f1a057896370b
+
