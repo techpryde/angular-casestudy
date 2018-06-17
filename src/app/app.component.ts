@@ -7,6 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works12!';
-  @Input() imgPath:string = "../../src/res/";
-  imgFileName:string = "logo.png";
+  
 }
