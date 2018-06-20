@@ -5,6 +5,8 @@ import { RouterModule,Routes } from '@angular/router';
 import { AuthenticationComponent } from '../authentication/authentication.component';
 import { AppComponent } from '../app.component';
 import { WelcomePageComponent } from '../welcome-page/welcome-page.component';
+import { AuthhandlerService } from '../authsession/authhandler.service';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 const routes:Routes=[
   {
@@ -12,6 +14,9 @@ const routes:Routes=[
   },
   {
     "path":"","component":WelcomePageComponent
+  },
+  {
+    "path":'dashboard/v1',"component":DashboardComponent,canActivate:[AuthhandlerService]
   }
 ];
 
