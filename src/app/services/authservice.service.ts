@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AuthserviceService {
@@ -20,6 +20,7 @@ export class AuthserviceService {
     // });
 
     return this.http.post<any>(this.domainUrl+'/api/v1/signin',data).map(returdata=>{
+      console.log(returdata);
       console.log(JSON.stringify(returdata));
       if(returdata && returdata.status){
               console.log("set");
