@@ -12,6 +12,7 @@ import { AuthserviceService } from './services/servicesindex';
 import { AuthhandlerService } from './authsession/authhandler.service';
 // import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardmodelModule } from './dashboardmodel/dashboardmodule.module';
+import { DirectivesharedmodModule } from './modules/directivesharedmod/directivesharedmod.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DashboardmodelModule } from './dashboardmodel/dashboardmodule.module';
     HttpModule,
     HttpClientModule,
     AppRouterModule,
-    DashboardmodelModule
+    DashboardmodelModule,
+    DirectivesharedmodModule
   ],
   providers: [AuthserviceService, AuthhandlerService],
   bootstrap: [AppComponent]

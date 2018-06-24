@@ -22,7 +22,7 @@ export class AuthenticationComponent implements OnInit {
   ngOnInit() {
    this.authservice.logOut();
    // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-   this.returnUrl='dashboard/v1';
+   this.returnUrl='/dashboard/v1';
   }
 
 
@@ -33,7 +33,7 @@ export class AuthenticationComponent implements OnInit {
     this.authservice.login(this.user.username, this.user.password).subscribe(data => {
       this.loading = false;
         if (data && data.status) {
-          this.router.navigate([this.returnUrl]);
+          this.router.navigate([this.returnUrl],{replaceUrl:true});
         }
         else{
 
