@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AuthserviceService {
 
-  private domainUrl: string='http://easyfeedback.herokuapp.com';
+  private domainUrl: string='https://easyfeedback.herokuapp.com';
 
   constructor(private http: HttpClient) { }
 
