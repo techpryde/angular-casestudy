@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" routerLink="/dashboard/v1">GFC Bank</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#selectMenuOptions">
@@ -9,16 +9,16 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Payments &amp; Transfer</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-         <a class="dropdown-item" routerLink="/payments/transaction">Make a Transaction</a>
-         <a class="dropdown-item" href="#">Manage Payments</a>
-         <a class="dropdown-item" href="#">History</a>
-       </div>
+          <a class="dropdown-item" routerLink="/payments/transaction">Make a Transaction</a>
+          <a class="dropdown-item" routerLink="#">Manage Payments</a>
+          <a class="dropdown-item" routerLink="history">History</a>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/account">Account</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/reports">Reports</a>
+        <a class="nav-link" routerLink="/logout">Logout</a>
       </li>
     </ul>
   </div>
