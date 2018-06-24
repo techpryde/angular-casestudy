@@ -18,7 +18,7 @@
         <a class="nav-link" routerLink="/account">Account</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/profile">Profile</a>
+        <a class="nav-link" routerLink="/logout">Logout</a>
       </li>
     </ul>
   </div>
@@ -72,7 +72,7 @@
             <div class="inputpay">
               <!-- <label>Account Number</label> -->
               <span class="fa fa-credit-card cardspan required"> Account Number</span>
-              <input type="text" name="acctNo" [(ngModel)]="transaction.acctNo" minlength="10" #acctNo="ngModel" class="form-control" placeholder="4510-XXXX-XXXX-XX13" maxlength="20" [appNumbersOnly]="true" (contextmenu)="onRightClick($event)" required/>
+              <input type="number" name="acctNo" [(ngModel)]="transaction.acctNo" minlength="10" #acctNo="ngModel" class="form-control" placeholder="4510-XXXX-XXXX-XX13" maxlength="20" [appNumbersOnly]="true" (contextmenu)="onRightClick($event)" required/>
             </div>
           </div>
           <div *ngIf="acctNo.invalid && (acctNo.dirty || acctNo.touched)" class="alert alert-danger">
@@ -116,7 +116,7 @@
           <div class="inputpay">
             <!-- <label>Account Number</label> -->
             <span class="fa fa-credit-card cardspan required"> Beneficiay Account Number</span>
-            <input type="text" name="acctno" [(ngModel)]="beneficiary.beneAcctNo" #beneAcctNo="ngModel" class="form-control" placeholder="7420-XXXX-XXXX-XX13" maxlength="12" [appNumbersOnly]="true" (contextmenu)="onRightClick($event)" required/>
+            <input type="number" name="acctno" [(ngModel)]="beneficiary.beneAcctNo" #beneAcctNo="ngModel" class="form-control" placeholder="7420-XXXX-XXXX-XX13" maxlength="12" [appNumbersOnly]="true" (contextmenu)="onRightClick($event)" required/>
           </div>
           <div class="col-5">
             <!-- <label>Account Number</label> -->
@@ -143,7 +143,7 @@
             <div class="col-3">
               <!-- <label>Account Number</label> -->
               <span class="fa required">Amount in INR</span>
-              <input type="text" name="amount" [(ngModel)]="transaction.amount" #amount="ngModel" class="form-control" placeholder="₹ 1500.00" minlength="2" [numberWithDecimal]=true (contextmenu)="onRightClick($event)" required/>
+              <input type="number" name="amount" [(ngModel)]="transaction.amount" #amount="ngModel" class="form-control" placeholder="₹ 1500.00" minlength="2" [numberWithDecimal]=true (contextmenu)="onRightClick($event)" required/>
             </div>
             <div class="col-5">
               <span class="fa">Transaction Message</span>
