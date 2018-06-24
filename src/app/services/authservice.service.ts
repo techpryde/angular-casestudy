@@ -20,10 +20,10 @@ export class AuthserviceService {
     // });
 
     return this.http.post<any>(this.domainUrl+'/api/v1/signin',data).map(returdata=>{
-      console.log(returdata);
-      console.log(JSON.stringify(returdata));
+      //console.log(returdata);
+    //  console.log(JSON.stringify(returdata));
       if(returdata && returdata.status){
-              console.log("set");
+            //  console.log("set");
                localStorage.setItem('currentUser',returdata);
        }
       return returdata;
