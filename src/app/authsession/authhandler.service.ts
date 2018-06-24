@@ -8,7 +8,7 @@ export class AuthhandlerService implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot){
     if(localStorage.getItem("currentUser")){
-      console.log("set1");
+    //  console.log("set1");
       return true;
     }
 
