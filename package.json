@@ -59,9 +59,4 @@
     "url": "https://github.com/techpryde/angular-casestudy/issues"
   },
   "homepage": "https://github.com/techpryde/angular-casestudy#readme"
-},
-"engines": {
-    "node": "6.11.0",
-    "npm": "3.10.10"
- 
 }
