@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountsearchComponent implements OnInit {
 
+  private acctNo : String;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  submitAccountSearch(){
+    if(this.acctNo.length>=10 && this.acctNo.length<=20){
+      alert("hello");
+    }
+    else{
+      alert("invalid");
+    }
+  }
+  onRightClick(event){
+    return false;
   }
 
 }
