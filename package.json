@@ -4,11 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
-    "build": "ng build --prod",
+    "start": "ng serve",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "postinstall": "ng build --env=prod",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -26,11 +25,9 @@
     "jquery": "^3.3.1",
     "popper.js":"^1.14.3",
     "core-js": "^2.4.1",
-    "express": "^4.16.3",
     "font-awesome": "^4.7.0",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4",
-    "typescript": "~2.2.0"
+    "zone.js": "^0.8.4"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0",
