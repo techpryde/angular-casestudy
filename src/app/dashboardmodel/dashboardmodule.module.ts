@@ -11,6 +11,8 @@ import { TransactionComponent } from '../paymentstransfer/transaction/transactio
 import { DashboardRouterModule } from '../app-router/dashboard-router/dashboard-router.module';
 import { HistoryComponent } from '../paymentstransfer/history/history.component';
 import { DirectivesharedmodModule } from '../modules/directivesharedmod/directivesharedmod.module';
+import { LogoutComponent } from '../components/logout/logout.component';
+import { AccountsearchComponent } from '../components/accountsearch/accountsearch.component';
 
 
 @NgModule({
@@ -23,7 +25,7 @@ import { DirectivesharedmodModule } from '../modules/directivesharedmod/directiv
     DashboardRouterModule,
     DirectivesharedmodModule
   ],
-  declarations: [DashboardComponent, TransactionComponent, HistoryComponent],
+  declarations: [DashboardComponent, TransactionComponent, HistoryComponent, LogoutComponent, AccountsearchComponent],
   providers: [PaymentservicesService]
 })
 export class DashboardmodelModule { }

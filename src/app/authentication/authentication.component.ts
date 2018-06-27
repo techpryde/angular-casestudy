@@ -40,7 +40,7 @@ export class AuthenticationComponent implements OnInit {
           this.notValidUser=true;
         }
     }, error => {
-      console.log("error"+error);
+    //  console.log("error"+error);
         this.loading = false;
     });
   }

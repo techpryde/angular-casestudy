@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" routerLink="/dashboard/v1">GFC Bank</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#selectMenuOptions">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="selectMenuOptions">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Payments &amp; Transfer</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/payments/transaction">Make a Transaction</a>
+          <a class="dropdown-item" href="#">Manage Payments</a>
+          <a class="dropdown-item" routerLink="history">History</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/account">Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+      <div class="searchaccount">
+      <span class="fa"><h3>Search Account Statement</h3></span>
+
+      <form #searchAccount="ngForm" (ngSubmit)="searchAccount.valid && submitAccountSearch()" novalidate>
+      <div class="row">
+        <div class="col-md-7">
+    		<div class="form-group">
+                <div class="icon-addon addon-lg">
+
+                    <input type="text" name="acctNunber" [appNumbersOnly]="true" (contextmenu)="onRightClick($event)" [(ngModel)]="acctNo" #acctNunber="ngModel" minlength="10" maxlength="20" placeholder="Enter Account Number" class="form-control searchbar" id="acttNo" required>
+                    <span class="fa fa-search searchbutton"></span>
+                    <!-- <label for="acttNo" class="fas fa-search" rel="tooltip" title="Account Number"></label> -->
+                    <br />
+                    <div *ngIf="acctNunber.invalid && (acctNunber.dirty || acctNunber.touched)" class="alert alert-danger">
+                      <div *ngIf="acctNunber.errors.minlength">
+                        Please Enter valid Account Number
+                      </div>
+                      <div *ngIf="acctNunber.errors.required">
+                        Account Number is required.
+                      </div>
+                      <div *ngIf="acctNunber.errors.maxlength">
+                        Account Number not more than 20 digit.
+                      </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        </div>
+        </form>
+      </div>
+</div>
