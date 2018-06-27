@@ -22,7 +22,7 @@ const routes:Routes=[
     "path":'logout',"component":LogoutComponent
   },
   {
-    "path":"account","component":AccountsearchComponent
+    "path":"account","component":AccountsearchComponent,canActivate:[AuthhandlerService]
   }
 ];
 @NgModule({
